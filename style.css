@@ -168,7 +168,16 @@ ul{
 .attribution a{text-decoration: none;}
 .frontend-mentor, .myself{color:hsl(233, 100%, 69%); font-weight:600;}
 
-@media (max-width: 375px) {
+@media (max-width: 430px) {
+    body{
+        display:grid;
+        grid-template-columns:1fr;
+        place-items:center;
+    }
+    p{
+        width:310px;
+        text-align:center;
+    }
     .flex{
         display:grid;
         grid-template-columns:1fr;
@@ -177,17 +186,26 @@ ul{
     .hero{
         background: url('/images/bg-header-mobile.png') center center/cover;
         background-repeat: no-repeat;
-        width: 100vw;
+        width:100%;
     }
     .hero-content{
-        text-align:center;   
+        text-align:center;
     }
-    .third-section{
+    .third-section ,    .col-footer{
         display:grid;
         grid-template-columns:1fr;
         place-items:center;
     }
-    .third-section{
-        width:100px;
+    .sixth-section,.seventh-section{
+        gap:5rem;
+    }
+    footer{
+        width:100%;
+    }
+    .social-network{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        gap:2rem;
     }
 }
