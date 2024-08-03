@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 :root{
     font-family: "Bai Jamjuree", sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     font-style: normal;
 }
 body{
     margin:0;
-    font-size: 18px;
+    font-size: 18x;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2rem;
+    line-height: 2rem;
+}
+p,dd{color:hsl(210, 10%, 33%);}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.col{
+    display:grid;
+    grid-template-columns:1fr;
 }
 .hero{
     background: url('/images/bg-header-desktop.png') center center/cover;
@@ -15,31 +29,22 @@ body{
 }
 .hero-content{
     background:transparent;
-    display: grid;
-    grid-template-columns: 1fr;
     gap: 2rem;
     place-items:center;
     padding-top: 2rem;
-    font-size: 1.5rem;
 }
 .hero-content img{
     width: 60px;
     height:60px;
 }
-.hero-content h1 {
-    font-size: 3rem;
-}
 .hero-content span{
     width: 50rem;
     text-align: center;
 }
-.hero-content .group-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.group-btn{
     gap:2rem;
 }
-.hero-content button{
+button{
     border-radius: 2rem;
     color: #fff;
     padding: 1rem 1.5rem;
@@ -49,23 +54,31 @@ body{
 }
 .ios{
     background: hsl(171, 66%, 44%);
+    transition: box-shadow 0.3s ease-in-out; /* Transición para el box-shadow */
+}
+.ios:hover{
+    box-shadow: 0px 2px 2px 2px rgba(38,186,164,0.49);
+    -webkit-box-shadow: 0px 2px 2px 2px rgba(38,186,164,0.49);
+    -moz-box-shadow: 0px 2px 2px 2px rgba(38,186,164,0.49);
 }
 .mac{
     background: hsl(233, 100%, 69%);
+    transition: box-shadow 0.3s ease-in-out; /* Transición para el box-shadow */
+}
+.mac:hover{
+    box-shadow: 0px 2px 2px 2px rgba(97,115,255,0.49);
+    -webkit-box-shadow: 0px 2px 2px 2px rgba(97,115,255,0.49);
+    -moz-box-shadow: 0px 2px 2px 2px rgba(97,115,255,0.49);
 }
 .second-section{
-    margin-top:2rem;
-    display: grid;
-    grid-template-columns: 1fr;
     gap: 1rem;
     place-items:center;
-    font-size: 1.5rem;
 }
-.second-section h2{
+.second-section h1,h2,h3,h4,h5, dt{
     font-size: 2rem;
 }
 .second-section p{
-    width: 57rem;
+    width: 40rem;
     text-align: center;
 }
 .third-section{
@@ -75,15 +88,106 @@ body{
     gap: 10rem;
 }
 .third-section div{
-    display:grid;
-    grid-template-columns: 1fr;
     gap:2rem;
     justify-content:start;
+    align-items:center;
+    text-align:left;
 }
-.third-section dt{
-    font-size: 2rem;
-    font-weight:600;
+.third-section dl {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px; /* Ajusta el espacio entre columnas según tus necesidades */
 }
+  
+.third-section  dt, dd {
+    margin: 0;
+}
+.third-section dt{font-weight:600;}
 .third-section dd{
+    width:350px;
+}
+.fourth-section{
+    place-items:center;
+    text-align: center;
+}
+.fourth-section p{
+    width:600px;
+}
+.fifth-section{
+    place-items:center;
+    text-align: center;
+}
+.sixth-section{
+    padding:1rem 10rem;
+}
+.sixth-section dl {
+    place-items:center;
+    text-align: center;
+}
+.sixth-section dd {
+    width:350px;
+}
+.seventh-section{
+    padding: 1rem 10rem;
+}
+.eighth-section{
+    place-items: center;
+    text-align:center;
+}
+.eighth-section p{
+    width: 600px;
+}
+footer{
+    position:relative;
+    margin-top:3rem;
+    background:hsl(201, 11%, 66%);
+    padding: 3rem;
     font-size: 1.5rem;
+    place-items:center;
+}
+ul{
+    list-style:none;
+    text-align:justify;
+    gap: 1rem;
+}
+.footer-content{
+    gap: 2rem 10rem;
+}
+.col-footer{
+    margin:0rem 10rem;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 1rem 10rem;
+}
+.attribution{
+    position: absolute;
+    bottom:0;
+
+}
+.attribution a{text-decoration: none;}
+.frontend-mentor, .myself{color:hsl(233, 100%, 69%); font-weight:600;}
+
+@media (max-width: 375px) {
+    .flex{
+        display:grid;
+        grid-template-columns:1fr;
+        place-items:center;
+    }
+    .hero{
+        background: url('/images/bg-header-mobile.png') center center/cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+    }
+    .hero-content{
+        text-align:center;   
+    }
+    .third-section{
+        display:grid;
+        grid-template-columns:1fr;
+        place-items:center;
+    }
+    .third-section{
+        width:100px;
+    }
 }
