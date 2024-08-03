@@ -127,6 +127,12 @@ button{
 .sixth-section dd {
     width:350px;
 }
+.card{
+    display:grid;
+    grid-template-columns:1fr;
+    place-items:center;
+    text-align:center;
+}
 .seventh-section{
     padding: 1rem 10rem;
 }
@@ -161,9 +167,12 @@ ul{
     gap: 1rem 10rem;
 }
 .attribution{
+    width:100%;
+    border-top: 2px solid #fff;
     position: absolute;
     bottom:0;
-
+    color: #fff;
+    text-align:center;
 }
 .attribution a{text-decoration: none;}
 .frontend-mentor, .myself{color:hsl(233, 100%, 69%); font-weight:600;}
@@ -207,5 +216,11 @@ ul{
         justify-content: space-between;
         align-items:center;
         gap:2rem;
+    }
+    .mobile-col{
+        display:grid;
+        grid-template-columns:1fr;
+        place-items:center;
+        text-align:center;
     }
 }
